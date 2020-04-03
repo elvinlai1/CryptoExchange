@@ -1,19 +1,16 @@
 Homepage.php
 
-
-<?php
-
-include "../app/partials/header.php"; 
-
-?>
+<style>
+<?php include '../app/partials/homepage.css'; ?>
+</style>
 
 <body>
   <div id="app">
     <ul id="nav">
       <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a>Nav1</a></li>
+      <li><a>Nav2</a></li>
+      <li><a>Nav3</a></li>
       <li id="LoginRegister"><a href="#login">Log in</a></li>
       <li id="LoginRegister"><a href="#signup">Sign up</a></li>
     </ul>
