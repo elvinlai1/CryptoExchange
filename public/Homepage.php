@@ -1,4 +1,5 @@
-Homepage.php
+<!DOCTYPE html>
+<html lang="en">
 
 <style>
 <?php include '../app/partials/homepage.css'; ?>
@@ -35,3 +36,5 @@ Homepage.php
 include "../app/partials/footer.php"; 
 
 ?> 
+
+</html>

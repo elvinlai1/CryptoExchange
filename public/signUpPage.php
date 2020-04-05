@@ -1,5 +1,11 @@
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+<?php include '../app/partials/SignUp.css'; ?>
+</style>
+  
 <body>
   <div id="app">
     <ul id="nav">
