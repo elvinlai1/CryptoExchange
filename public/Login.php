@@ -5,6 +5,10 @@
   <title>CryptoExchange</title>
   <meta charset="utf-8">
 </head>
+  
+<style>
+<?php include '../app/partials/Login.css'; ?>
+</style>
 
 <body>
   <div id="app">
