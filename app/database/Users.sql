@@ -1,7 +1,7 @@
 CREATE DATABASE CryptoTrader; 
 USE CryptoTrader; 
 
-CREATE TABLE users(
+CREATE TABLE Users(
     AccountID           VarChar(36)     NOT NULL,
     LoginID             VarChar(36)     NOT NULL,
     Password            VarChar(255)    NOT NULL,
