@@ -5,6 +5,7 @@ CREATE TABLE Cryptos(
     Name                VarChar(36)     NOT NULL,
     Price               Decimal(10)     NOT NULL,
     Change              VarChar(10)     NOT NULL,
+    Stock               int(10)         NOT NULL,
     MarketCapital       VarChar(10)     NOT NULL,
     CONSTRAINT PK_Cryptos PRIMARY KEY(CryptoID)                      
     );
