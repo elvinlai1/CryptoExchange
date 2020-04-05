@@ -6,6 +6,6 @@ CREATE TABLE Cryptos(
     Price               Decimal(10)     NOT NULL,
     Change              VarChar(10)     NOT NULL,
     MarketCapital       VarChar(10)     NOT NULL,
-    PRIMARY KEY(CryptoID)                      
+    CONSTRAINT PK_Cryptos PRIMARY KEY(CryptoID)                      
     );
     
