@@ -1,4 +1,6 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <style>
 <?php include '../app/partials/SignUp.css'; ?>
