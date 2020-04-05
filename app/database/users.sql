@@ -9,5 +9,5 @@ CREATE TABLE users(
     LastName            VarChar(25)     NOT NULL,
     DateOfBirth         Date            NOT NULL,
     Email               VarChar(36)     NOT NULL,
-    CONSTRAINT          ACCOUNT_PK      PRIMARY KEY(AccountID)                      
+    PRIMARY KEY(AccountID)                      
     );
