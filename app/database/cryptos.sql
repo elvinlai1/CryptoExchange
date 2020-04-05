@@ -1,6 +1,6 @@
 USE CryptoTrader; 
 
-CREATE TABLE CRYPTOS(
+CREATE TABLE cryptos(
     CryptoID            VarChar(36)     NOT NULL,
     Name                VarChar(36)     NOT NULL,
     Price               Decimal(10)     NOT NULL,
