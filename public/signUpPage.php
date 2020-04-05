@@ -1,5 +1,9 @@
 <html>
 
+<style>
+<?php include '../app/partials/SignUp.css'; ?>
+</style>
+  
 <body>
   <div id="app">
     <ul id="nav">
