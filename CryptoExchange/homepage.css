@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: yellow;
+  margin: 0;
+}
+
+#app {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+li a:active:not(.active) {
+  background-color: #333;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+#LoginRegister {
+  float: right;
+  background-color: blue;
+}
+
+.bodyframe {
+  background-color: lightblue;
+  margin: 0;
+}
+
+h1 {
+  text-align: left;
+  margin: 0;
+  padding: 50px 100px 10px;
+  font-weight: 100;
+  font-family: SuisseWorks-Bold;
+  font-size: 100px;
+  line-height: 1.08;
+}
+
+p {
+  padding: 10px;
+  margin: 0;
+}
+
+h2 {
+  text-align: left;
+  padding: 10px 100px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 230px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px 100px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
