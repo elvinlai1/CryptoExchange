@@ -1,8 +1,6 @@
 <?php
 
 include "./app/partials/header.php";
-include "./app/partials/navbar.php";
-
 
 
 ?>
@@ -19,7 +17,6 @@ include "./app/partials/navbar.php";
     </form>
   </body>
 </div>
-
 
 
 

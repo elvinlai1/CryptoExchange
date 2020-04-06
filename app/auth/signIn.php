@@ -9,24 +9,16 @@
 //Direct user to user homepage 
 
 
-if (isset($_POST['submit'])) {
-
-require "app/database/database.php";
-
-
+require "../database/database.php";
 
 $db = new Database(); 
 
-$stmt = $db->connect()->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->execute([$_POST['email']]);
-$user = $stmt->fetch();
+$user = $db->run("SELECT * FROM users WHERE email=?", [$_POST['email']])->fetch();
 
-    if ($user && password_verify($_POST['pass'], $user['pass']))
+    if ($user && password_verify($_POST['pass'], $user['password']))
         {
-            echo "<p>valid!</p>";
+            echo "valid!";
         } else {
-            echo "<p>invalid</p>";
+            echo "invalid";
         }
-
-}
 
