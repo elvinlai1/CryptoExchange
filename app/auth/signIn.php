@@ -8,20 +8,25 @@
 //Initiate session
 //Direct user to user homepage 
 
-require "../app/database/database.php";
+
+if (isset($_POST['submit'])) {
+
+require "app/database/database.php";
+
 
 
 $db = new Database(); 
 
-$pdo = $db->connect();
-
-$stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+$stmt = $db->connect()->prepare("SELECT * FROM users WHERE email = ?");
 $stmt->execute([$_POST['email']]);
 $user = $stmt->fetch();
 
-if ($user && password_verify($_POST['pass'], $user['pass']))
-{
-    echo "valid!";
-} else {
-    echo "invalid";
+    if ($user && password_verify($_POST['pass'], $user['pass']))
+        {
+            echo "<p>valid!</p>";
+        } else {
+            echo "<p>invalid</p>";
+        }
+
 }
+
