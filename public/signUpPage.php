@@ -9,12 +9,12 @@
 <body>
   <div id="app">
     <ul id="nav">
-      <li><a class="active" href="#home">Home</a></li>
+      <li><a class="active" href="CryptoExchange/public/Homepage.html">Home</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
-      <li id="LoginRegister"><a href="#login">Log in</a></li>
-      <li id="LoginRegister"><a href="#signup">Sign up</a></li>
+      <li id="LoginRegister"><a href="CryptoExchange/public/Login.html">Log in</a></li>
+      <li id="LoginRegister"><a href="CryptoExchange/public/SignUp.html">Sign up</a></li>
     </ul>
   </div>
   <div class=bodyframe>
