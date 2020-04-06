@@ -17,8 +17,8 @@
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
-      <li id="LoginRegister"><a href="#login">Log in</a></li>
-      <li id="LoginRegister"><a href="#signup">Sign up</a></li>
+      <li id="LoginRegister"><a href="CryptoExchange/public/Login.php">Log in</a></li>
+      <li id="LoginRegister"><a href="CryptoExchange/public/Signup.php">Sign up</a></li>
     </ul>
   </div>
   <div class=bodyframe>
