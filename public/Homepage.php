@@ -1,4 +1,3 @@
-
 <?php 
 include '../app/partials/header.php'; 
 include '../app/partials/navbar.php';
@@ -13,6 +12,7 @@ include '../app/partials/navbar.php';
     <h2>
       There is no better startline than here.
     </h2>
+    
     <button class="button" style="vertical-align:middle" href="../public/SignUp.php">
       <span> Get Started </span>
     </button>

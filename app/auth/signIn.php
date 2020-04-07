@@ -9,7 +9,7 @@
 //Direct user to user homepage 
 
 
-require "../database/database.php";
+require '../database/database.php';
 
 $db = new Database(); 
 
