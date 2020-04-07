@@ -8,19 +8,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="../public/ViewCrypto.php">Crypto <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="ViewCrypto.php">Crypto <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../public/ViewWallet.php">Wallet <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="ViewWallet.php">Wallet <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../public/ViewTransaction.php">Transaction <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="ViewTransaction.php">Transaction <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="text-align: right" href="../public/Login.php">Log in <span class="sr-only">(current)</span></a>
+        <a class="nav-link" style="text-align: right" href="Login.php">Log in <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="text-align: right" href="../public/SignUp.php">Sign up <span class="sr-only">(current)</span></a>
+        <a class="nav-link" style="text-align: right" href="SignUp.php">Sign up <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
