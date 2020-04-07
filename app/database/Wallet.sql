@@ -7,7 +7,7 @@ CREATE TABLE Wallet(
     Cointotal           VarChar(36)     NOT NULL,
     AccountID           VarChar(36)     NOT NULL,
     Balance             Decimal(10,2)     NOT NULL,
-    CONSTRAINT PK_Wallet PRIMARY KEY (WalletID);
+    PRIMARY KEY (WalletID);
 
 INSERT INTO Wallet (WalletID, CryptoID, CoinName, Cointotal, AccountID, Balance)
     VALUES  ('1', '1', 'Bitcoin', '1', '1', 10000),
