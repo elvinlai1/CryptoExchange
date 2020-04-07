@@ -71,7 +71,6 @@ if(isset($_POST['submit'])) {
 
                     <label for="LastName" class="text-info">Last Name: </label><input type="text" name="lastName" class="form-control" required>
 
-                    <label for="DateOfBirth" class="text-info">Date of Birth: </label><input type="date" name="DOB" value="yyyy/mm/dd" max:"1999-04-07" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="email" class="text-info">Email:</label><input type="email"  name="email" autocomplete="off" class="form-control" required>
