@@ -1,6 +1,9 @@
 
 
-<?php include '../app/partials/header.php'; ?>
+<?php 
+include '../app/partials/header.php'; 
+include '../app/partials/navbar.php';
+?>
 
 <body>
   <div class=bodyframe>
@@ -37,4 +40,5 @@
       </footer>
     </main>
 </body>
-<include "../app/partial/footer.php";?>
+
+<?php include "../app/partial/footer.php";?>
