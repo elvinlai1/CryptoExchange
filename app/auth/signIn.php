@@ -9,18 +9,19 @@
 //Direct user to user homepage 
 
 
-require '../database/database.php';
+require '../app/database/database.php';
 
 $db = new Database(); 
 
-$user = $db->run("SELECT * FROM users WHERE email=?", [$_POST['email']])->fetch();
+if(isset($_POST['submit'])) { 
 
-    if ($user && password_verify($_POST['pass'], $user['password']))
-        {
-            echo "valid!";
-            //header('location: ../');
-        } else {
-            echo "invalid";
-            header('location: ../Homepage.html');
-        }
+    $user = $db->run("SELECT * FROM USERS WHERE LoginID=?", [$_POST['username']])->fetch();
 
+        if ($user && password_verify($_POST['password'], $user['Password']))
+            {
+                echo "valid!";
+                header('location: ../app/user/Homepage.php');
+            } else {
+                echo "<script type='text/javascript'>alert('Invalid Credentials');</script>";;
+            }
+}

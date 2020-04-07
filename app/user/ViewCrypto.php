@@ -1,12 +1,15 @@
 <?php
 
 require "../database/database.php";
-include '../app/partials/header.php';
-include '../app/partials/navbar.php';
+include '../partials/header.php'; 
+include '../partials/navbar.php';
+
+$db = new Database();
+
 ?>
 
 
-<h1>Cryptos</h1>
+<h1>Market</h1>
 
 <div class="container">
     <table style="width: 100%">
@@ -15,27 +18,22 @@ include '../app/partials/navbar.php';
         <th>Price</th>
         <th>Change</th>
         <th>MarketCap</th>
+        <th>Stock</th>
     </tr>
 
 <?php
 
-$crypto = $db_run("SELECT Name, Price, PercentChange, MarketCapital FROM Cryptos");
-$result = mysqli_query($db, $crypto) or die ("Bad Query: $crypto");
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        ?>
-        <tr>
-            <td> <?php echo $row['Name'] ?></td>
-            <td> <?php echo $row['Price'] ?></td>
-            <td> <?php echo $row['PercentChange'] ?></td>
-            <td> <?php echo $row['MarketCapital'] ?></td>
-        </tr>
-        <?php
-    }
-} 
-else {
-    echo "0 results";
+$CryptoMarket = $db->run("SELECT * FROM Cryptos")->fetchAll();
+
+foreach($CryptoMarket as $row){
+
+    echo "<tr>";
+    echo "<td>" . $row['CryptoID'] . "</td>";
+    echo "<td>" . $row['Name'] . "</td>";
+    echo "<td>" . $row['Price'] . "</td>";
+    echo "<td>" . $row['Changes'] . "</td>";
+    echo "<td>" . $row['Stock'] . "</td>";
+    echo"</tr>";
 }
 
 ?>
@@ -43,5 +41,5 @@ else {
 
 
 <?php
-include '../app/partials/footer.php';
+include "../partials/footer.php"; 
 ?>

@@ -16,11 +16,11 @@ include "./app/partials/header.php";
           
           <div class = "row">
             <div class ="col">
-                  <a href="public/signInPage.php">
+                  <a href="public/LoginPage.php">
                   <button class="btn btn-lg btn-primary btn-block">Sign in</button>
             </div>
             <div class ="col">
-                  <a href="public/SignUp.php">
+                  <a href="public/SignUpPage.php">
                   <button class="btn btn-lg btn-primary btn-block">Sign Up</button>
             </div>
             </div>

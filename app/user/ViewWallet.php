@@ -1,6 +1,6 @@
 <?php 
-include '../app/partial/header.php'; 
-include '../app/partial/navbar.php'; 
+include '../partials/header.php'; 
+include '../partials/navbar.php';
 ?>
 
 <body>
@@ -41,4 +41,8 @@ while($row = mysqli_fetch_assoc($query_run)) {
 
 </body>
 
-<?php include '../app/partial/footer.php'; ?>
+<?php 
+
+include "../partials/footer.php"; 
+
+?> 

@@ -1,6 +1,6 @@
 <?php 
-include '../app/partials/header.php'; 
-include '../app/partials/navbar.php';
+include '../partials/header.php'; 
+include '../partials/navbar.php';
 ?>
 
 
@@ -20,6 +20,6 @@ include '../app/partials/navbar.php';
 
 <?php 
 
-include "../app/partials/footer.php"; 
+include "../partials/footer.php"; 
 
 ?> 

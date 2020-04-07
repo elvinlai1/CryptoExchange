@@ -1,6 +1,6 @@
 <?php 
 include '../app/partials/header.php'; 
-include '../app/partials/navbar.php';
+include '../app/auth/signIn.php';
 ?>
 
 <body>
@@ -15,11 +15,11 @@ include '../app/partials/navbar.php';
                 <form id="login-form" class="form" action="" method="post">
                   <div class="form-group">
                     <label for="username" class="text-info">Username:</label><br>
-                    <input type="text" name="username" id="username" class="form-control">
+                    <input type="text" name="username" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="password" class="text-info">Password:</label><br>
-                    <input type="password" name="password" id="password" class="form-control">
+                    <input type="password" name="password" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br><br>

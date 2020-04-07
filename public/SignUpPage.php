@@ -1,7 +1,5 @@
 <?php
 include '../app/partials/header.php';
-include '../app/partials/navbar.php';
-
 require '../app/database/database.php';
 //If signup button pressed
 //grab database file
@@ -45,7 +43,8 @@ if(isset($_POST['submit'])) {
     $signUp = $db->run("INSERT INTO Users (LoginID, Password, FirstName, LastName, Email, AccountType) 
                         VALUES( ?, ?, ?, ?, ?, ?)",[$loginID, $hashed_pword, $firstName, $lastName, $email, 'user']);
 
-    header('location: Homepage.php');
+    //header("location: http://".$_SERVER['HTTP_HOST']);
+    header('location: /CryptoExchange/index.php');
         
 }
     
