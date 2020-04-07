@@ -35,22 +35,23 @@ if(isset($_POST['submit'])) {
 
     //Check if passwords match
     if($password !== $passwordMatch){
-        header('location: ?message=passwordMatch');
+        header('location: ?message=passwordError');
         echo "<script type='text/javascript'>alert('Passwords does not match');</script>";
+    } else {
+      //create uniqid
+      $accID = uniqid();
+
+      //hash password
+      $hashed_pword = password_hash($password, PASSWORD_DEFAULT);
+
+      //insert into table
+      $signUp = $db->run("INSERT INTO Users (AccountID, LoginID, Password, FirstName, LastName, Email) 
+                          VALUES( ?, ?, ?, ?, ?, ?)",[$accID, $loginID, $hashed_pword, $firstName, $lastName, $email]);
+
+      //header("location: http://".$_SERVER['HTTP_HOST']);
+      header('location: /CryptoExchange/index.php');
     }
-
-    //create uniqid
-    $accID = uniqid();
-
-    //hash password
-    $hashed_pword = password_hash($password, PASSWORD_DEFAULT);
-
-    //insert into table
-    $signUp = $db->run("INSERT INTO Users (AccountID, LoginID, Password, FirstName, LastName, Email) 
-                        VALUES( ?, ?, ?, ?, ?, ?)",[$accID, $loginID, $hashed_pword, $firstName, $lastName, $email]);
-
-    //header("location: http://".$_SERVER['HTTP_HOST']);
-    header('location: /CryptoExchange/index.php');
+    
         
 }
     

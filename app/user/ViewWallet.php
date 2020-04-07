@@ -1,14 +1,13 @@
 <?php
 
 require "../database/database.php";
-
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
 $db = new Database();
 
 ?>
-<body>
+
 
 <h1>Your Wallet</h1>
 
@@ -22,29 +21,22 @@ $db = new Database();
     <p> Balance does not include crypto values </p>
 
 <?php
-require '../app/database/database.php';
 
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, 'CryptoTrader');
+$Wallet = $db->run("SELECT * FROM Cryptos")->fetchAll();
 
+foreach($Wallet as $row){
 
-$wallet = $db_run("SELECT CoinName, CoinTotal, Balance FROM Wallet");
-$query_run = mysqli_query($connection, $wallet) or die("Bad Query: $transaction");
-
-// output data of each row
-while($row = mysqli_fetch_assoc($query_run)) {
-    ?>
-    <tr>
-        <td> <?php echo $row['CoinName'] ?></td>
-        <td> <?php echo $row['CoinTotal'] ?></td>
-        <td> <?php echo $row['Balance'] ?></td>
-    </tr>
-    <?php
+    echo "<tr>";
+    echo "<td>" . $row['CryptoID'] . "</td>";
+    echo "<td>" . $row['Name'] . "</td>";
+    echo "<td>" . $row['Price'] . "</td>";
+    echo "<td>" . $row['Changes'] . "</td>";
+    echo "<td>" . $row['Stock'] . "</td>";
+    echo"</tr>";
 }
-?>
-</div>
 
-</body>
+?>
+
 
 
 <?php 
