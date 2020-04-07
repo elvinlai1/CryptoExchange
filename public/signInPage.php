@@ -1,18 +1,18 @@
 <?php
 
-include "./app/partials/header.php";
+include "../app/partials/header.php";
 
 ?>
 
 
 <title> Sign In </title>
 
-<body class="text-center align-items-center h-50 py-5 my-5">
+<body class="text-center align-items-center py-5 my-5">
 
 <div class="container">
 <div class="row justify-content-center">
 
-<div class="col-6">
+<div class="col-3">
 
 
           <form class="form-signin" action="./app/auth/signIn.php" method="post">
@@ -34,4 +34,4 @@ include "./app/partials/header.php";
 
 </body>
 
-<?php include "./app/partials/footer.php"; ?>
+<?php include "../app/partials/footer.php"; ?>
