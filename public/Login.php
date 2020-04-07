@@ -1,14 +1,5 @@
 
-<html lang="en">
-
-<head>
-  <title>CryptoExchange</title>
-  <meta charset="utf-8">
-</head>
-  
-<style>
 <?php include '../app/partials/Login.css'; ?>
-</style>
 
 <body>
   <div id="app">
@@ -58,9 +49,8 @@
   <div class=cookies>
   </div>
  
-<?php
-  include "../app/auth/signIn.php";
-?>
-</body>
 
-</html>
+  include "../app/auth/signIn.php";
+
+</body>
+?>
