@@ -8,39 +8,34 @@ $db = new Database();
 
 ?>
 
-
 <h1>Your Wallet</h1>
 
+
 <div class="container">
-    <table style="width: 200px">
+    <table style="width: 100%">
+    <p> Balance does not include crypto values </p>
     <tr>
         <th>Crypto</th>
         <th>Amount</th>
-        <th>AccountBalance</th>
+        <th>Account Balance</th>
     </tr>
-    <p> Balance does not include crypto values </p>
-
+   
 <?php
 
-$Wallet = $db->run("SELECT * FROM Cryptos")->fetchAll();
+$Wallet = $db->run("SELECT * FROM wallet")->fetchAll();
 
 foreach($Wallet as $row){
 
     echo "<tr>";
-    echo "<td>" . $row['CryptoID'] . "</td>";
-    echo "<td>" . $row['Name'] . "</td>";
-    echo "<td>" . $row['Price'] . "</td>";
-    echo "<td>" . $row['Changes'] . "</td>";
-    echo "<td>" . $row['Stock'] . "</td>";
+    echo "<td>" . $row['CoinName'] . "</td>";
+    echo "<td>" . $row['Cointotal'] . "</td>";
+    echo "<td>" . $row['Balance'] . "</td>";
     echo"</tr>";
 }
 
 ?>
 
 
-
 <?php 
-
 include "../partials/footer.php"; 
-
 ?> 
