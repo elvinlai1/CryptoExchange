@@ -1,20 +1,11 @@
 
-<html lang="en">
 
-<style>
-</style>
+<?php
+include '../app/partials/header.php';
+include '../app/partials/navbar.php';
+?>
   
 <body>
-  <div id="app">
-    <ul id="nav">
-      <li><a class="active" href="CryptoExchange/public/Homepage.html">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-      <li id="LoginRegister"><a href="CryptoExchange/public/Login.html">Log in</a></li>
-      <li id="LoginRegister"><a href="CryptoExchange/public/SignUp.html">Sign up</a></li>
-    </ul>
-  </div>
   <div class=bodyframe>
     <main id="content">
       <div id="signup">
@@ -57,9 +48,8 @@
       <footer> Copyright &copy; 2020 CryptoExchange<br>
       </footer>
     </main>
-  </div>
-  <div class=cookies>
-  </div>
 </body>
 
-</html>
+<?php
+include '../app/partials/footer.php';
+?>
