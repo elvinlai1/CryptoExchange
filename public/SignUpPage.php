@@ -46,8 +46,8 @@ if(isset($_POST['submit'])) {
     $hashed_pword = password_hash($password, PASSWORD_DEFAULT);
 
     //insert into table
-    $signUp = $db->run("INSERT INTO Users (Account ID, LoginID, Password, FirstName, LastName, Email, AccountType) 
-                        VALUES( ?, ?, ?, ?, ?, ?)",[$accID, $loginID, $hashed_pword, $firstName, $lastName, $email, 'user']);
+    $signUp = $db->run("INSERT INTO Users (AccountID, LoginID, Password, FirstName, LastName, Email) 
+                        VALUES( ?, ?, ?, ?, ?, ?)",[$accID, $loginID, $hashed_pword, $firstName, $lastName, $email]);
 
     //header("location: http://".$_SERVER['HTTP_HOST']);
     header('location: /CryptoExchange/index.php');
