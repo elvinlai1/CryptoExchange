@@ -10,3 +10,10 @@ CREATE TABLE Cryptos(
     CONSTRAINT PK_Cryptos PRIMARY KEY(CryptoID)                      
     );
     
+    
+    INSERT INTO accounts.Cryptos (CryptoID, Name, Price, PercentChange, Stock)
+    VALUES  (1, 'Bitcoin', '10290.50', '0.0375', 100),
+		    (2, 'Ethereum', '242.40', '0.1489', 50),
+            (3, 'XRP', '0.28', '0.0746', 75),
+            (4, 'Tether', '1.40', '0.0017', 200);
+    
