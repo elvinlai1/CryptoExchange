@@ -30,7 +30,7 @@ while($row = mysqli_fetch_assoc($result)) {
     <tr>
         <td> <?php echo $row['TransactionID'] ?></td>
         <td> <?php echo $row['AccountID'] ?></td>
-        <td> <?php echo $row['CryptoID'] ?></td>
+        <td> <?php echo $row['CryptoName'] ?></td>
         <td> <?php echo $row['PurchasePrice'] ?></td>
         <td> <?php echo $row['PurchaseAmount'] ?></td>
     </tr>
