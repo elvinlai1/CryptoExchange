@@ -10,7 +10,7 @@ CREATE TABLE Wallet(
     PRIMARY KEY (WalletID),
     FOREIGN KEY (AccID) REFERENCES Users(AccountID);
 
-INSERT INTO Wallet (WalletID, CryptoID, CoinName, Cointotal, AccountID, Balance)
+INSERT INTO Wallet (WalletID, CryptoID, CoinName, Cointotal, AccID, Balance)
     VALUES  ('1', '1', 'Bitcoin', '1', '1', 10000),
             ('2', '2', 'Ethereum', '0', '2', 340000),
             ('3', '3', 'XRP', '2', '3', 0),
