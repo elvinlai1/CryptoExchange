@@ -45,8 +45,6 @@ include '../app/partials/navbar.php';
           </div>
         </div>
       </div>
-      <footer> Copyright &copy; 2020 CryptoExchange<br>
-      </footer>
     </main>
 </body>
 

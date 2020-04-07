@@ -36,9 +36,9 @@ include '../app/partials/navbar.php';
           </div>
         </div>
       </div>
-      <footer> Copyright &copy; 2020 CryptoExchange<br>
-      </footer>
     </main>
 </body>
 
-<?php include "../app/partial/footer.php";?>
+<?php 
+include '../app/partials/footer.php'; 
+?>
