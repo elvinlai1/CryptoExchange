@@ -18,7 +18,9 @@ $user = $db->run("SELECT * FROM users WHERE email=?", [$_POST['email']])->fetch(
     if ($user && password_verify($_POST['pass'], $user['password']))
         {
             echo "valid!";
+            //header('location: ../');
         } else {
             echo "invalid";
+            header('location: ../Homepage.html');
         }
 

@@ -1,44 +1,37 @@
 <?php
 
-include "../app/partials/header.php"; 
+include "./app/partials/header.php";
 
 ?>
 
-<body>
-    <div id="login">
-        <h3 class="text-center text-white pt-5">Login form</h3>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Register here</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<title> Sign In </title>
+
+<body class="text-center align-items-center h-50 py-5 my-5">
+
+<div class="container">
+<div class="row justify-content-center">
+
+<div class="col-6">
+
+
+          <form class="form-signin" action="./app/auth/signIn.php" method="post">
+            
+                  <div class="form-group">
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            
+          </form>
+
+</div>
+</div>
+</div> 
+
 </body>
 
-
-<?php 
-
-include "../app/partials/footer.php"; 
-
-?> 
+<?php include "./app/partials/footer.php"; ?>
