@@ -13,7 +13,7 @@ $db = new Database();
 <h1>Transaction History</h1>
 
 <div class="container">
-    <table>
+    <table style="width: 100%">
     <tr>
         <th>Transaction</th>
         <th>Account</th>
@@ -23,26 +23,19 @@ $db = new Database();
     </tr>
 
 <?php
-require '../app/database/database.php';
 
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, 'dbName');
+$Transactions = $db->run("SELECT * FROM Transaction")->fetchAll();
 
+foreach($Transactions as $row){
 
-$transaction = $db_run("SELECT TransactionID, AccountID, CryptoName, PurchasePrice, PurchaseAmount FROM Transaction");
-$query_run = mysqli_query($connection, $transaction) or die("Bad Query: $transaction");
-
-// output data of each row
-while($row = mysqli_fetch_assoc($result)) {
-    ?>
-    <tr>
-        <td> <?php echo $row['TransactionID'] ?></td>
-        <td> <?php echo $row['AccountID'] ?></td>
-        <td> <?php echo $row['CryptoName'] ?></td>
-        <td> <?php echo $row['PurchasePrice'] ?></td>
-        <td> <?php echo $row['PurchaseAmount'] ?></td>
-    </tr>
-    <?php
+    echo "<tr>";
+    echo "<td>" . $row['TransactionID'] . "</td>";
+    echo "<td>" . $row['AccountID'] . "</td>";
+    echo "<td>" . $row['CryptoID'] . "</td>";
+    echo "<td>" . $row['CryptoName'] . "</td>";
+    echo "<td>" . $row['PurchaePrice'] . "</td>";
+    echo "<td>" . $row['PurchaseAmount'] . "</td>";
+    echo"</tr>";
 }
 ?>
 </div>
