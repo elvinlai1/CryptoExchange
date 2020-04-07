@@ -57,6 +57,10 @@
   </div>
   <div class=cookies>
   </div>
+ 
+<?php
+  include "../app/auth/signIn.php";
+?>
 </body>
 
 </html>
