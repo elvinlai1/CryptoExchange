@@ -8,7 +8,7 @@ include '../app/partial/navbar.php';
 <h1>Your Wallet</h1>
 
 <div class="container">
-    <table>
+    <table style="width: 200px">
     <tr>
         <th>Crypto</th>
         <th>Amount</th>
