@@ -7,6 +7,5 @@ CREATE TABLE Users(
     FirstName           VarChar(25)     NOT NULL,
     LastName            VarChar(25)     NOT NULL,
     Email               VarChar(36)     NOT NULL,
-    AccountType         VarChar(36)     NOT NULL,
     CONSTRAINT PK_Users PRIMARY KEY(LoginID)                      
     );
