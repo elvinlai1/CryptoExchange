@@ -2,28 +2,28 @@
 
 
 
-class Crypto {
+class Wallet {
     
     public $coinname;
-    public $coinprice;
+    public $amount;
 
 
-    public function __construct($coinname, $coinprice) {
+    public function __construct($coinname, $amount) {
         $this->coinname = $coinname; 
-        $this->coinprice = $coinprice;
+        $this->amount = $amount;
     }
 
-    public function getCoinPrice(){
+    public function getAmount(){
 
         //SQL query
         require '../app/database/database.php';
         $connection = mysqli_connect("localhost", "root", "");
         $db = mysqli_select_db($connection, 'dbName');
         
-        $coinprice = $db_run("SELECT Price FROM Cryptos");
-        $query_run = mysqli_query($connection, $coinprice) or die("Bad Query: $transaction");
+        $amount = $db_run("SELECT CoinTotal FROM Wallet");
+        $query_run = mysqli_query($connection, $amount) or die("Bad Query: $amount");
         
-        return $this->$row['Price'];
+        return $this->$row['CoinTotal'];
 
     }
 
@@ -35,12 +35,12 @@ class Crypto {
         $connection = mysqli_connect("localhost", "root", "");
         $db = mysqli_select_db($connection, 'dbName');
         
-        $coinname = $db_run("SELECT Name FROM Cryptos");
+        $coinname = $db_run("SELECT CoinName FROM Wallet");
         $query_run = mysqli_query($connection, $coinname) or die("Bad Query: $transaction");
         
-        return $this->$row['Name'];
+        return $this->$row['CoinName'];
     }
     
 }
-?>
 
+?>
