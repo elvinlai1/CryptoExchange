@@ -1,6 +1,6 @@
+<?php
 
-
-[ViewWallet]
+/*[ViewWallet]*/
 
 $sql = "SELECT CryptoID, Cointotal FROM Wallet";
 $result = $conn->query($sql);
@@ -14,7 +14,7 @@ $result->num_rows > 0) {
 }
 
 
-[ViewCryptos]
+/*[ViewCryptos]*/
 
 $sql = "SELECT CrpytoID, Name, Price, Stock, Change FROM Cryptos";
 $result = $conn->query($sql);
@@ -26,3 +26,5 @@ f ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+
+?>
