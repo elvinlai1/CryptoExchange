@@ -2,7 +2,7 @@
 
 
 
-class CoinPrice {
+class Crypto {
     
     public $coinname;
     public $coinprice;
