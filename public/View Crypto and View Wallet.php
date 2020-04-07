@@ -1,29 +1,33 @@
 <?php
 
+require "../database/database.php";
+
 /*[ViewWallet]*/
 
-$sql = "SELECT CryptoID, Cointotal FROM Wallet";
-$result = $conn->query($sql);
-$result->num_rows > 0) {
+$checkwallet = $db_run("SELECT CryptoID, Cointotal FROM Wallet");
+$result = mysqli_query($db,$checkwallet) or die("Bad Query: $checkwallet");
+if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> Coin Type: ". $row["CryptoID"]. " - Coin Total: ". $row["Cointotal"] . "<br>";
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<br> Coin Type: ". $row["CryptoID"]. "<br> Coin Total: ". $row["Cointotal"] . "<br>";
     }
-} else {
+} 
+else {
     echo "0 results";
 }
 
 
 /*[ViewCryptos]*/
 
-$sql = "SELECT CrpytoID, Name, Price, Stock, Change FROM Cryptos";
-$result = $conn->query($sql);
+$crypto = $db_run("SELECT * FROM Cryptos");
+$result = mysqli_query($db, $crypto) or die ("Bad Query: $crypto");
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> id: ". $row["id"]. " - Name: ". $row["Name"]. " - Price: " . $row["Price"]." - Stock: " . $row["Stock"]. " - Change: " . $row["Change"] . "<br>";
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<br> id: ". $row["id"]. " <br> Name: ". $row["Name"]. " <br> Price: " . $row["Price"]." <br> Stock: " . $row["Stock"]. " <br> Change: " . $row["Change"] . "<br>";
     }
-} else {
+} 
+else {
     echo "0 results";
 }
 
