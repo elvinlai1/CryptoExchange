@@ -26,12 +26,12 @@ $query_run = mysqli_query($connection, $wallet) or die("Bad Query: $transaction"
 
 // output data of each row
 while($row = mysqli_fetch_assoc($query_run)) {
-    <?php
+    ?>
     <tr>
         <td> <?php echo $row['CoinName'] ?></td>
         <td> <?php echo $row['CoinTotal'] ?></td>
     </tr>
-    ?>
+    <?php
 }
 ?>
 </div>
