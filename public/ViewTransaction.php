@@ -1,4 +1,7 @@
-<?php include '../app/partial/header.php'; ?>
+<?php 
+include '../app/partial/header.php'; 
+include '../app/partial/footer.php'; 
+?>
 
 <body>
 
@@ -26,6 +29,7 @@ $query_run = mysqli_query($connection, $transaction) or die("Bad Query: $transac
 
 // output data of each row
 while($row = mysqli_fetch_assoc($result)) {
+    ?>
     <tr>
         <td> <?php echo $row['TransactionID'] ?></td>
         <td> <?php echo $row['AccountID'] ?></td>
@@ -33,6 +37,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <td> <?php echo $row['PurchasePrice'] ?></td>
         <td> <?php echo $row['PurchaseAmount'] ?></td>
     </tr>
+    <?php
 }
 ?>
 </div>
