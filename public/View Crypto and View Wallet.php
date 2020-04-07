@@ -18,7 +18,7 @@ $result->num_rows > 0) {
 
 $sql = "SELECT CrpytoID, Name, Price, Stock, Change FROM Cryptos";
 $result = $conn->query($sql);
-f ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<br> id: ". $row["id"]. " - Name: ". $row["Name"]. " - Price: " . $row["Price"]." - Stock: " . $row["Stock"]. " - Change: " . $row["Change"] . "<br>";
