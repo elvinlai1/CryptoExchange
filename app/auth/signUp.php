@@ -13,7 +13,7 @@ require "../app/database/database.php";
 
     // connect to database
     $connection = mysqli_connect("localhost", "root","", "authentication");
-    $db = mysqli_select_db($connection, 'Cry');
+    $db = mysqli_select_db($connection, 'CryptoTrader');
 
     if (isset($_POST[''register_btn])) {
         session_start();
