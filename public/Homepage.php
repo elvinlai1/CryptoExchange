@@ -1,5 +1,8 @@
 
-<?php include '../app/partials/header.php'; ?>
+<?php 
+include '../app/partials/header.php'; 
+include '../app/partials/navbar.php';
+?>
 
 
 <body>
@@ -10,12 +13,9 @@
     <h2>
       There is no better startline than here.
     </h2>
-    <button class="button" style="vertical-align:middle">
+    <button class="button" style="vertical-align:middle" href="../public/SignUp.php">
       <span> Get Started </span>
     </button>
-  </div>
-  <div class=cookies>
-  </div>
 </body>
 
 <?php 
