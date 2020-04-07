@@ -23,7 +23,7 @@ include '../app/partials/navbar.php';
                     <label for="DateOfBirth" class="text-info">Date of Birth: </label><input type="date" name="DOB" id="DOB" value="yyyy/mm/dd" max:"1999-04-07" class="form-control">
                   </div><br>
                   <div class="form-group">
-                    <label for="password" class="text-info">Email:</label><input type="email" id="email" name="email" autocomplete="off" class="form-control" required>
+                    <label for="email" class="text-info">Email:</label><input type="email" id="email" name="email" autocomplete="off" class="form-control" required>
                   </div><br>
                   <div class="form-group">
                     <label for="username" class="text-info">Username:</label><input type="text" name="username" id="username" class="form-control" required>
