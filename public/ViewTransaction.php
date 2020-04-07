@@ -9,7 +9,7 @@
     <tr>
         <th>Transaction</th>
         <th>Account</th>
-        <th>Crypto</th>
+        <th>CryptoID</th>
         <th>PurchasePrice</th>
         <th>PurchaseAmount</th>
     </tr>
@@ -21,12 +21,11 @@ $connection = mysqli_connect("localhost", "root", "");
 $db = mysqli_select_db($connection, 'dbName');
 
 
-$transaction = $db_run("SELECT * FROM Transaction");
+$transaction = $db_run("SELECT TransactionID, AccountID, CryptoName, PurchasePrice, PurchaseAmount FROM Transaction");
 $query_run = mysqli_query($connection, $transaction) or die("Bad Query: $transaction");
 
 // output data of each row
 while($row = mysqli_fetch_assoc($result)) {
-    <?php
     <tr>
         <td> <?php echo $row['TransactionID'] ?></td>
         <td> <?php echo $row['AccountID'] ?></td>
@@ -34,7 +33,6 @@ while($row = mysqli_fetch_assoc($result)) {
         <td> <?php echo $row['PurchasePrice'] ?></td>
         <td> <?php echo $row['PurchaseAmount'] ?></td>
     </tr>
-    ?>
 }
 ?>
 </div>
