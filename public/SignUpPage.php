@@ -12,6 +12,7 @@ $db = new Database();
 
 if(isset($_POST['submit'])) { 
     //Get and filter inputs
+
     $loginID        = filter_input(INPUT_POST, 'loginID');
     $password       = filter_input(INPUT_POST, 'password');
     $passwordMatch  = filter_input(INPUT_POST, 'passwordMatch');
@@ -19,29 +20,34 @@ if(isset($_POST['submit'])) {
     $lastName       = filter_input(INPUT_POST, 'lastName');
     $email          = filter_input(INPUT_POST, 'email');
 
-     //If any input is null, reload form
-     if(
-        empty($loginID) 
-        || empty($password) 
-        || empty($passwordMatch) 
-        || empty($firstName) 
-        || empty($lastName)
-        || empty($email)
+    //If any input is null, reload form
+    if(
+      empty($loginID) 
+      || empty($password) 
+      || empty($passwordMatch) 
+      || empty($firstName) 
+      || empty($lastName)
+      || empty($email)
     ){
-        header('location: ?message=emptyField');
-        echo "<script type='text/javascript'>alert('Please fill in all fields');</script>";
-        exit();
+      header('location: ?message=emptyField');
+      echo "<script type='text/javascript'>alert('Please fill in all fields');</script>";
     }
 
-     //Check if passwords match
-     if($password !== $passwordMatch){
+    //Check if passwords match
+    if($password !== $passwordMatch){
         header('location: ?message=passwordMatch');
         echo "<script type='text/javascript'>alert('Passwords does not match');</script>";
     }
-  
+
+    //create uniqid
+    $accID = uniqid();
+
+    //hash password
     $hashed_pword = password_hash($password, PASSWORD_DEFAULT);
-    $signUp = $db->run("INSERT INTO Users (LoginID, Password, FirstName, LastName, Email, AccountType) 
-                        VALUES( ?, ?, ?, ?, ?, ?)",[$loginID, $hashed_pword, $firstName, $lastName, $email, 'user']);
+
+    //insert into table
+    $signUp = $db->run("INSERT INTO Users (Account ID, LoginID, Password, FirstName, LastName, Email, AccountType) 
+                        VALUES( ?, ?, ?, ?, ?, ?)",[$accID, $loginID, $hashed_pword, $firstName, $lastName, $email, 'user']);
 
     //header("location: http://".$_SERVER['HTTP_HOST']);
     header('location: /CryptoExchange/index.php');

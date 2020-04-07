@@ -1,8 +1,13 @@
-<?php 
+<?php
+
+require "../database/database.php";
+
 include '../partials/header.php'; 
 include '../partials/navbar.php';
-?>
 
+$db = new Database();
+
+?>
 <body>
 
 <h1>Your Wallet</h1>
@@ -40,6 +45,7 @@ while($row = mysqli_fetch_assoc($query_run)) {
 </div>
 
 </body>
+
 
 <?php 
 
