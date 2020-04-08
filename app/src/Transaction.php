@@ -25,13 +25,23 @@ class Transaction {
 
     public function buyCrypto($CryptoID){
 
-        //F
+        //Get purchase amount value
 
     }
 
 
     public function sellCrypto(){
 
+        //Get sell amount value
+
+    }
+
+
+   
+
+    public function FundAccount(){
+
+        //Get fund amount value
 
     }
 
@@ -42,7 +52,6 @@ class Transaction {
 
 
     }
-
 
 
 

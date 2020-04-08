@@ -9,3 +9,13 @@
 5. Copy and execute the `CryptoTraderUser.sql` file from the setup folder using the SQL Tab to create user access for our database connection
 6. Copy and execute the `CreateCryptoExchange.sql` file to create the CryptoExchangeDatabase with values. 
 7. `localhost/CryptoExchange/` should direct you to the index. 
+
+
+
+## Testing
+
+1. Create user
+2. Sign in 
+3. Fund Account with cash
+4. Buy Crypto 
+5. Sell Crypto 

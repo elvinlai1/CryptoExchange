@@ -15,3 +15,7 @@ INSERT INTO Wallet (WalletID, CryptoID, CoinName, Cointotal, AccID, Balance)
             ('2', '2', 'Ethereum', '0', '2', 340000),
             ('3', '3', 'XRP', '2', '3', 0),
             ('4', '4', 'Tether', '3', '4', 2000);
+
+
+
+
