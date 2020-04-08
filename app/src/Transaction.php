@@ -1,8 +1,12 @@
 <?php 
 
+require "../database/database.php";
+
 include "../src/Crypto.php";
 include "../src/User.php";
 include "../src/Wallet.php";
+
+
 
 class Transaction {
 
@@ -16,7 +20,7 @@ class Transaction {
     public function buyCrypto($actID,$Crypto,$amt){
 
         
-
+        
         $this->AccountID = $actID; 
         $this->CryptoID = $Crypto; 
         $this->PurchaseAmount = $amt; 
@@ -29,9 +33,14 @@ class Transaction {
         $CryptoPrice = $Crypto->getPrice();
 
         //Get UserFund Amount
-        $UserFunds = $User->getFundAmount();
+        if(!$UserFunds->checkFund()){
+
+
+        }
 
         //Get Wallet Crypto total
+        /*
+        $Cryptototal = $Wallet->getWallet($actID, $CryptoID);
         
         //Check stock amount
 
@@ -42,7 +51,7 @@ class Transaction {
         //Post Transaction
 
         //else echo error
-        
+        /*
         getCoinTotal()
 
 
@@ -52,16 +61,17 @@ class Transaction {
         updateStock()
 
         $this->postTransaction();
-
+        */
+        
     }
 
 
     public function sellCrypto($actID, $Crypto, $amt){
 
         //Get sell amount value
-        getPrice()
+        //getPrice()
 
-        updateStock($sellAmount);
+        //updateStock($sellAmount);
 
         $this->postTransaction();
 
@@ -72,7 +82,10 @@ class Transaction {
 
         //Get amount to fund 
         //Get AccountID 
-        updateFundAmount(){
+
+        $user = new User($actID);
+
+        $user->updateFundAmount($fundAmount);
 
     
     }
@@ -91,8 +104,14 @@ class Transaction {
         //Get CryptoID
         //PurchaseAmount
         //PricePrice
+        //$db = new Database();
 
+        $TransactionID = uniquid();
 
+        $db->run("INSERT INTO `transaction`(`TransactionID`, `AccountID`, `CryptoID`, `CryptoName`, `PurchasePrice`, `PurchaseAmount`) 
+                  VALUES (?,?,?,?,?,?)", [$TransactionID, $this->$AccountID, $this->CryptoID, $this->CryptoName, $this->PurchasePrice, $this->PurchaseAmount]);
+
+    
     }
 
     public function retrieveTransactionHistory($accountID){

@@ -6,7 +6,6 @@ include '../app/partials/header.php';
   <div class=bodyframe>
     <main id="content">
       <div id="signup">
-        <h1 class="text-center text-white pt-5">Sign Up form</h1>
         <div class="container">
           <div id="-row" class="row justify-content-center align-items-center">
             <div id="signup-column" class="col-md-6 py-2">

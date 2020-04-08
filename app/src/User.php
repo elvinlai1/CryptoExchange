@@ -1,6 +1,6 @@
 <?php
 
-require "../database/database.php";
+
 
 class User {
 
@@ -38,20 +38,36 @@ class User {
 
     }
 
-    public function updateFundAmount(){
+    public function insertFundAmount($amt){
 
         $db = new database();
-        $getFund = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
-        $fund = $getFund['Balance'];
-      
+        $db->run("INSERT INTO `funds`(`Currency_Type`, `Balance`, `AccountID`) VALUES (?,?,?)", ['CAD',$amt,$this->AccountID]);
+        
+    }
+
+    public function updateFundAmount($amt){
+
+        $db = new database();
+        $db->run("UPDATE `funds` SET `Balance`=?, WHERE 'AccountID'=?", [$amt,$this->AccountID]);
+        
+    }
+
+    public function checkFund(){
+
+        $db = new database();
+        $check = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
+
+        if(!$check){
+            return $fund; 
+        }
 
     }
 
     public function getTransactionsHistory(){
 
         $db = new database();
-        $transaction = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
-        return $transactions
+        $transaction = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetchAll();
+        return $transactions;
 
     }
 

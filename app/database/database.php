@@ -17,7 +17,6 @@ class Database {
 
     function run($sql, $params = NULL){
 
-        //Calls the connect method without reading the variables
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute($params);
         return $stmt;

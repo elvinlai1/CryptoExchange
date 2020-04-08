@@ -17,9 +17,15 @@ VALUES  (1, 'Bitcoin', 10290.50, 10290.50, 100),
         (3, 'XRP', 0.28,0.28, 75),
         (4, 'Tether', 1.40, 1.40, 200);
 
+
+/* 
+skipped 
+
+
 UPDATE Cryptos
 SET Price = 10288.80, Stock = 110
 WHERE Name = 'Bitcoin';
 
 SELECT * FROM Cryptos;
 
+*/

@@ -5,8 +5,7 @@ include '../auth/userAccess.php';
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
-require "../database/database.php";
-$db = new Database();
+include '../src/Transaction.php';
 
 ?>
 
@@ -22,41 +21,42 @@ $db = new Database();
     <div class="container">
     <table style="width: 100%">
   
-    <div class="main-block">
-      <h1>Choose Transaction Type:</h1>
-        <form>
-        <div class="metod">
-          <div style="display:inline-block"> 
-            <label for="radioOne" class="radio">Deposit</label>
-            <span>
-              <input class="fname" type="text" name="name" placeholder="Enter Amount">
-            </span><br>
-            <button href="/" class="button">Submit</button>
+    <div id="-row" class="row justify-content-center align-items-center">
+            <div id="signup-column" class="col-md-6 py-2">
+              <div id="signup-box" class="col-md-12">
+                <form id = signup-form class = "form" action="#!">
+                  <div class="form-group" style="display:inline-block"> 
+                    <label for="Deposit" class="text-info">Deposit</label>
+                    <span>
+                      <input class="form-control" type="text" name="Deposit" placeholder="Enter Amount">
+                    </span><br>
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
+                  </div>
+                  <div class="form-group" style="display:inline-block">
+                    <label for="Withdrawal" class="text-info">Withdrawal</label>
+                    <span>
+                      <input class="form-control" type="text" name="Withdrawal" placeholder="Enter Amount">
+                    </span><br>        
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
+                  </div>
+                  <div class="form-group" style="display:inline-block">
+                    <label for="BuyCrypto" class="text-info">Buy Crypto</label>
+                    <span>
+                      <input class="form-control" type="text" name="BuyCrypto" placeholder="Enter Amount">
+                    </span><br>        
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
+                  </div>
+                  <div class="form-group" style="display:inline-block">
+                    <label for="SellCrypto" class="text-info">Sell Crypto</label>
+                    <span>
+                      <input class="form-control" type="text" name="SellCrypto" placeholder="Enter Amount">
+                    </span><br>        
+                    <button name="submit" href="public/SignUpPage.php" class="button">Submit</button>
+                  </div>
+              </form>
+            </div>
+           </div>
           </div>
-          <div style="display:inline-block">
-            <label for="radioTwo" class="radio">Withdrawal</label>
-            <span>
-              <input class="fname" type="text" name="name" placeholder="Enter Amount">
-            </span><br>        
-            <button href="/" class="button">Submit</button>
-          </div>
-                    <div style="display:inline-block">
-            <label for="radioTwo" class="radio">Buy Crypto</label>
-            <span>
-              <input class="fname" type="text" name="name" placeholder="Enter Amount">
-            </span><br>        
-            <button href="/" class="button">Submit</button>
-          </div>
-                    <div style="display:inline-block">
-            <label for="radioTwo" class="radio">Sell Crypto</label>
-            <span>
-              <input class="fname" type="text" name="name" placeholder="Enter Amount">
-            </span><br>        
-            <button href="/" class="button">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
     
 
   </div>
