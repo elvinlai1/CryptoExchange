@@ -5,6 +5,8 @@ include '../auth/userAccess.php';
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
+require "../database/database.php";
+$db = new Database();
 
 ?>
 
@@ -16,9 +18,20 @@ include '../partials/navbar.php';
     </h1>
     <br>
     <h2> Your  Account Value: </h2>
-    
+
+    <div class="container">
+    <table style="width: 100%">
+    <?php
+
+  
+    ?>
+
+  </div>
 
 </body>
+
+
+
 
 <?php 
 
