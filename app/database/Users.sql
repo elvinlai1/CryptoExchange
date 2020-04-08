@@ -1,4 +1,3 @@
-CREATE DATABASE CryptoTrader; 
 USE CryptoTrader; 
 
 CREATE TABLE Users(

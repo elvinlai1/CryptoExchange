@@ -4,60 +4,87 @@ include "../src/Crypto.php";
 include "../src/User.php";
 include "../src/Wallet.php";
 
-require "../database/database.php";
-
 class Transaction {
 
+    private $AccountID;
+    private $CryptoID;
+    private $CryptoName;
+    private $PurchasePrice;
+    private $PurchaseAmount;
 
 
-    public function getCryptoPrice($CryptoID){
+    public function buyCrypto($actID,$Crypto,$amt){
 
-        //Query CryptoID
         
 
+        $this->AccountID = $actID; 
+        $this->CryptoID = $Crypto; 
+        $this->PurchaseAmount = $amt; 
+
+        $User = new User($actID);
+        $Crypto = new Crypto($CrytoID);
+        $Wallet = new Wallet();
+
+        //Get Cryptoprice
+        $CryptoPrice = $Crypto->getPrice();
+
+        //Get UserFund Amount
+        $UserFunds = $User->getFundAmount();
+
+        //Get Wallet Crypto total
+        
+        //Check stock amount
+
+        //Check UserFunds > (purchaseamount*cryptoprice) 
+        //Update Fund
+        //Update Wallet
+        //Update Stock
+        //Post Transaction
+
+        //else echo error
+        
+        getCoinTotal()
+
+
+
+        updateFundAmount()
+        updateWalletTotal($amt)
+        updateStock()
+
+        $this->postTransaction();
+
     }
 
-    public function getUserWallet($accountID){
 
-        //Send accountID to Users to find walletID
-        //Get WalletID 
-        //Get 
-
-    }
-
-
-    public function buyCrypto($accountID,$purchaseAmount){
-
-        //Get purchase amount value
-
-    }
-
-
-    public function sellCrypto($accountID, $sellAmount){
+    public function sellCrypto($actID, $Crypto, $amt){
 
         //Get sell amount value
+        getPrice()
+
+        updateStock($sellAmount);
+
+        $this->postTransaction();
 
     }
-
-
    
 
-    public function DepositAccount($accountID, $fundAmount){
+    public function depositAccount($actID, $fundAmount){
 
         //Get amount to fund 
         //Get AccountID 
+        updateFundAmount(){
 
+    
     }
 
-    public function WithdrawalAccount(){
+    public function withdrawalAccount(){
 
         //uhhhh technically not implentable?
 
     }
 
 
-
-    public function postTransaction($accountID,){
+    public function postTransaction(){
 
         //Get AccountID
         //TransactionID = uniqueID
@@ -65,6 +92,13 @@ class Transaction {
         //PurchaseAmount
         //PricePrice
 
+
+    }
+
+    public function retrieveTransactionHistory($accountID){
+
+        $user = new User($accountID);
+        $transactions = $user->getTransationHistory();
 
     }
 

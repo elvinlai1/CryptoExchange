@@ -2,7 +2,6 @@
 
 require "../database/database.php";
 
-
 class Crypto {
 
     public $CryptoID; 
@@ -11,11 +10,9 @@ class Crypto {
     public $Stock;
     public $MarketCapital;
 
-    
+    function __construct($CryptoID){
 
-    function __construct ($CryptoID){
-
-        
+        $db = new Database();
         $Crypto = $db->run("SELECT * FROM Cryptos WHERE CryptoID=?", [$CryptoID])->fetch();
     
         $this->CryptoID = $Crypto['CryptoID'];
@@ -25,27 +22,37 @@ class Crypto {
         $this->MarketCapital = $Crypto['MarketCapital'];
     
     }
+
     
-        
-    public function getCoinPrice(){
+    public function updateStock($Amt){
+
+        //Grab purchase amount 
+
+        $db = new Database();
+        $Crypto = $db->run("SELECT * FROM Cryptos WHERE CryptoID=?", [$CryptoID])->fetch();
+
+
+    }
+
+
+    public function getPrice(){
     
+        return $this->Price;
 
     }
 
 
     public function getCoinName(){
 
-       
-    }
-
-    public function updateCoinAmount(){
-
-
-
+        return $this->Name; 
     }
 
 
+    public function getStock(){
 
+        return $this->Stock; 
+
+    }
 
     
 }

@@ -8,6 +8,4 @@ CREATE TABLE Transaction(
     PurchasePrice       VarChar(25)     NOT NULL,
     PurchaseAmount      INT(10)         NOT NULL,
     CONSTRAINT PK_Transaction PRIMARY KEY (TransactionID)
-    CONSTRAINT FK_Account FOREIGN KEY (AccountID) REFERENCES Users(AccountID)
-    CONSTRAINT FK_Crypto FOREIGN KEY (CryptoID) REFERENCES Cryptos(CryptoID)
     );

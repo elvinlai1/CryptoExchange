@@ -4,8 +4,10 @@ CREATE TABLE Funds (
 	Balance VARCHAR(64),
 	AccountID VARCHAR(64) NOT NUll
 );
-  	INSERT INTO Funds(Currency_Type,Balance,AccountID)
-    VALUES  (CAD,'50000',1),
-            (CAD,'100000',2),
-            (CAD,'25000',3),
-            (CAD,'20',4),
+
+	USE CryptoTrader;
+    INSERT INTO Funds(Currency_Type,Balance,AccountID)
+    VALUES  ('CAD','50000',1),
+            ('CAD','100000',2),
+            ('CAD','25000',3),
+            ('CAD','20',4);

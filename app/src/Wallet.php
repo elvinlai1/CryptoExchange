@@ -9,9 +9,12 @@ class Wallet {
     private $CoinName;
     private $Cointotal;
 
-    function __construct($accountID){
 
-        $Wallet = $db->run("SELECT * FROM Wallet WHERE AccountID=?", [$accountID])->fetchAll();
+    protected function getWallet($accountID, $CryptoID){
+
+        $db = new Database();
+
+        $Wallet = $db->run("SELECT * FROM Wallet WHERE AccountID=? AND CryptoID=?",[$actID,$crypto])->fetch();
 
         $this->WalletID = $Wallet['WalletID'];
         $this->CryptoID = $Wallet['CryptoID'];
@@ -19,18 +22,36 @@ class Wallet {
         $this->Cointotal = $Wallet['Cointotal']; 
         $this->AccountID = $Wallet['AccountID'];
 
-    }
-    
-
-    protected function getAmount(){
+        return $Wallet; 
 
     }
 
 
-    protected function getCoinName(){
+    public function updateWalletTotal($amt,$crypto){
+
+        //Grab purchase amount 
+
+        $db = new Database();
+        $update = $db->run("UPDATE WALLET WHERE CryptoID=?", [$CryptoID]);
+
+
+    }
+
+
+
+    public function getCoinTotal(){
+
+
+
+    }
+
+
+    public function getCoinName(){
 
         
     }
+
+
     
 }
 

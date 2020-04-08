@@ -2,7 +2,6 @@
 
 require "../database/database.php";
 
-
 class User {
 
     private $AccountID; 
@@ -12,8 +11,7 @@ class User {
     private $LastName; 
     private $Email; 
 
-
-    protected function getUserProfile($loginID){
+    protected function __construct($loginID){
 
         $profile = $db->run("SELECT * FROM USERS WHERE LoginID=?", [$loginID])->fetch();
 
@@ -31,6 +29,30 @@ class User {
 
     }
 
+    public function getFundAmount(){
 
+        $db = new database();
+        $getFund = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
+        $fund = $getFund['Balance'];
+        return $fund; 
+
+    }
+
+    public function updateFundAmount(){
+
+        $db = new database();
+        $getFund = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
+        $fund = $getFund['Balance'];
+      
+
+    }
+
+    public function getTransactionsHistory(){
+
+        $db = new database();
+        $transaction = $db->run("SELECT * FROM Funds WHERE AccountID=?", [$this->AccountID])->fetch();
+        return $transactions
+
+    }
 
 }

@@ -14,7 +14,7 @@ $CryptoMarket = $db->run("SELECT * FROM Cryptos")->fetchAll();
 ?>
 
 
-<h1>Market</h1>
+<h1>Markets</h1>
 
 <div class="container">
     <table style="width: 100%">
