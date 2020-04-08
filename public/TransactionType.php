@@ -1,6 +1,5 @@
 <?php
 include '../app/partials/header.php';
-include '../app/auth/signUp.php';
 ?>
   
 <body>
@@ -18,28 +17,28 @@ include '../app/auth/signUp.php';
                     <span>
                       <input class="form-control" type="text" name="Deposit" placeholder="Enter Amount">
                     </span><br>
-                    <button href="/" class="button">Submit</button>
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
                   </div>
                   <div class="form-group" style="display:inline-block">
                     <label for="Withdrawal" class="text-info">Withdrawal</label>
                     <span>
                       <input class="form-control" type="text" name="Withdrawal" placeholder="Enter Amount">
                     </span><br>        
-                    <button href="/" class="button">Submit</button>
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
                   </div>
                   <div class="form-group" style="display:inline-block">
                     <label for="BuyCrypto" class="text-info">Buy Crypto</label>
                     <span>
                       <input class="form-control" type="text" name="BuyCrypto" placeholder="Enter Amount">
                     </span><br>        
-                    <button href="/" class="button">Submit</button>
+                    <button href="public/SignUpPage.php" class="button">Submit</button>
                   </div>
                   <div class="form-group" style="display:inline-block">
                     <label for="SellCrypto" class="text-info">Sell Crypto</label>
                     <span>
                       <input class="form-control" type="text" name="SellCrypto" placeholder="Enter Amount">
                     </span><br>        
-                    <button name="submit" href="/" class="button">Submit</button>
+                    <button name="submit" href="public/SignUpPage.php" class="button">Submit</button>
                   </div>
               </form>
             </div>
