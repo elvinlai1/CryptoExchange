@@ -5,11 +5,17 @@ require "../database/database.php";
 
 class Crypto {
 
+    public $CryptoID; 
+    public $Name; 
+    public $Price; 
+    public $Stock;
+    public $MarketCapital;
+
     
 
     protected function getCryptoInfo(){
 
-        CryptoID
+        
 
     }
     
@@ -30,7 +36,7 @@ class Crypto {
 
     }
 
-    public function 
+
 
 
     
