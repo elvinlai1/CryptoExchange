@@ -4,7 +4,7 @@ include '../auth/userAccess.php';
 //Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
-
+//Database Connection
 require "../database/database.php";
 $db = new Database();
 
@@ -35,6 +35,8 @@ foreach($Wallet as $row){
 }
 
 ?>
+
+
 
 
 <?php 

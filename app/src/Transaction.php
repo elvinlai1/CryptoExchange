@@ -1,15 +1,15 @@
 <?php 
 
-include "../Crypto.php";
-include "../Wallet.php";
-
+require "../database/database.php";
+$db = new Database();
 
 class Transaction {
 
 
 
-    public function getCryptoPrice(){
+    public function getCryptoPrice($CryptoID){
 
+        //Query CryptoID
         
 
     }
@@ -23,14 +23,14 @@ class Transaction {
     }
 
 
-    public function buyCrypto($CryptoID){
+    public function buyCrypto($accountID,$purchaseAmount){
 
         //Get purchase amount value
 
     }
 
 
-    public function sellCrypto(){
+    public function sellCrypto($accountID, $sellAmount){
 
         //Get sell amount value
 
@@ -39,16 +39,28 @@ class Transaction {
 
    
 
-    public function FundAccount(){
+    public function DepositAccount($accountID, $fundAmount){
 
-        //Get fund amount value
+        //Get amount to fund 
+        //Get AccountID 
+
+    }
+
+    public function WithdrawalAccount(){
+
+        //uhhhh technically not implentable?
 
     }
 
 
-    public function postTransaction(){
 
-        //Get AccountID, 
+    public function postTransaction($accountID,){
+
+        //Get AccountID
+        //TransactionID = uniqueID
+        //Get CryptoID
+        //PurchaseAmount
+        //PricePrice
 
 
     }

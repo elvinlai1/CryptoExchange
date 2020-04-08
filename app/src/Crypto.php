@@ -4,15 +4,16 @@ require "../database/database.php";
 
 
 class Crypto {
-    
+
     
 
+    protected function getCryptoInfo(){
 
-    public function __construct($coinname, $coinprice) {
-        
-        
+        CryptoID
+
     }
-
+    
+        
     public function getCoinPrice(){
     
 
@@ -23,6 +24,15 @@ class Crypto {
 
        
     }
+
+    public function updateCoinAmount(){
+
+
+    }
+
+    public function 
+
+
     
 }
 ?>

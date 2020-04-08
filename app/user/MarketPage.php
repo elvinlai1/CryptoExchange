@@ -4,14 +4,12 @@ include '../auth/userAccess.php';
 //Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
-
+//Database Connection
 require "../database/database.php";
-
 $db = new Database();
-//Grab all values in the CryptoMarket
+
+//Grab the CryptoMarket
 $CryptoMarket = $db->run("SELECT * FROM Cryptos")->fetchAll();
-
-
 
 ?>
 
