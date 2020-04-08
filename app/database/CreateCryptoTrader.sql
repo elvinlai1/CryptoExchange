@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `cryptos`
 --
+CREATE DATABASE crytotrader; 
+USE cryptotrader;
 
 CREATE TABLE `cryptos` (
   `CryptoID` varchar(36) NOT NULL,
