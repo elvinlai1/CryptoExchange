@@ -34,20 +34,19 @@ if(isset($_POST['submit'])) {
       echo "<script type='text/javascript'>alert('Please fill in all fields');</script>";
     }
 
-    if ($db_found) {
-    }
-    
-    else {
-    
-    $errorMessage = "Error logging on";
-    
-    }
-
     //Check if passwords match
     if($password !== $passwordMatch){
         header('location: ?message=passwordError');
         echo "<script type='text/javascript'>alert('Passwords does not match');</script>";
-    } else {
+    } 
+    
+    //Search for duplicate loginID
+    $checkLoginID = $db->run("SELECT * FROM USERS WHERE LoginID=?", [$loginID])->fetch();
+    
+    if ($checkLoginID){
+      echo "<script type='text/javascript'>alert('Username Taken');</script>";
+    }
+    else {
 
       //create uniqid
       $accID = uniqid();
