@@ -7,6 +7,7 @@ CREATE TABLE Wallet(
     Cointotal           VarChar(36)     NOT NULL,
     AccID               VarChar(36)     NOT NULL,
     Balance             Decimal(10,2)   NOT NULL,
+    Cash                VarChar(36)
     PRIMARY KEY (WalletID),
     FOREIGN KEY (AccID) REFERENCES Users(AccountID);
 
