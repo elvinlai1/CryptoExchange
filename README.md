@@ -7,6 +7,7 @@
 3. Copy folder (depending on where you cloned it) into `C:\xampp\htdocs`. Result should be `C:\xampp\htdocs\CryptoExchange\` 
 4. Head over to `localhost/phpmyadmin` on your browser to configure the database and connection privileges 
 5. Import `CreateCryptoTraderDatabase.sql` file 
+6. Import `CreateCryptoTraderUser.sql` file
 7. `localhost/CryptoExchange/` should direct you to the index. 
 
 
