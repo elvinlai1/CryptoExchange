@@ -2,8 +2,8 @@
 
 class Database {
     private $host = "localhost";
-    private $user = "dev";
-    private $pwd = "Crypto";
+    private $user = "Crypto";
+    private $pwd = "CryptoTrader";
     private $dbName = "CryptoTrader";
 
     protected function connect() {
@@ -17,6 +17,7 @@ class Database {
 
     function run($sql, $params = NULL){
 
+        //Calls the connect method without reading the variables
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute($params);
         return $stmt;

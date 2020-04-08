@@ -37,7 +37,10 @@ foreach($Transactions as $row){
     echo "<td>" . $row['PurchaseAmount'] . "</td>";
     echo"</tr>";
 }
+
 ?>
+
+
 </div>
 
 </body>

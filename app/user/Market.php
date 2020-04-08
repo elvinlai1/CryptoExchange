@@ -1,10 +1,18 @@
 <?php
 
-require "../database/database.php";
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
+require "../database/database.php";
+
 $db = new Database();
+//Grab all values in the CryptoMarket
+$CryptoMarket = $db->run("SELECT * FROM Cryptos")->fetchAll();
+
+
+//buy Crypto Currency 
+//
+
 
 ?>
 
@@ -23,8 +31,7 @@ $db = new Database();
 
 <?php
 
-$CryptoMarket = $db->run("SELECT * FROM Cryptos")->fetchAll();
-
+//Display Values in a table
 foreach($CryptoMarket as $row){
 
     echo "<tr>";
@@ -38,7 +45,8 @@ foreach($CryptoMarket as $row){
 
 ?>
 
-
+ </table>
+</div>
 
 <?php
 include "../partials/footer.php"; 

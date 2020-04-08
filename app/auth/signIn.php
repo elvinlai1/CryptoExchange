@@ -13,14 +13,26 @@ require '../app/database/database.php';
 
 $db = new Database(); 
 
+session_start();
+    if(isset($_SESSION['signedin'])){
+      header('location: Homepage.php');
+    }
+
 if(isset($_POST['submit'])) { 
 
-    $user = $db->run("SELECT * FROM USERS WHERE LoginID=?", [$_POST['username']])->fetch();
+    $loginid = filter_input(INPUT_POST, 'username');
+    $password = filter_input(INPUT_POST, 'password');
 
-        if ($user && password_verify($_POST['password'], $user['Password']))
+    $user = $db->run("SELECT * FROM USERS WHERE LoginID=?", [$loginid])->fetch();
+
+        if ($user && password_verify($password, $user['Password']))
             {
                 echo "valid!";
                 header('location: ../app/user/Homepage.php');
+                session_start();
+                
+
+
             } else {
                 echo "<script type='text/javascript'>alert('Invalid Credentials');</script>";;
             }
