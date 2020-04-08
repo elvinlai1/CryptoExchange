@@ -22,3 +22,4 @@ SET Price = 10288.80, Stock = 110
 WHERE Name = 'Bitcoin';
 
 SELECT * FROM Cryptos;
+
