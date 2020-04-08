@@ -4,18 +4,18 @@ include '../auth/userAccess.php';
 //Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
+
+
 ?>
 
 
 <body>
   <div class=bodyframe>
     <h1>
-      The Best Website <p>for</p> Simple Investment
+      Hello <?php echo $_SESSION['firstName'] ." ".  $_SESSION['lastName'];?>
     </h1>
-    <h2>
-      There is no better startline than here.
-      
-    </h2>
+    <br>
+    <h2> Your  Account Value: </h2>
     
 
 </body>
