@@ -1,9 +1,11 @@
 <?php
-
-require "../database/database.php";
+//User Access
+include '../auth/userAccess.php';
+//Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
+require "../database/database.php";
 $db = new Database();
 
 ?>

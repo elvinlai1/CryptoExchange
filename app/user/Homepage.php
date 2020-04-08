@@ -1,4 +1,7 @@
 <?php 
+//User Access
+include '../auth/userAccess.php';
+//Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 ?>
@@ -11,11 +14,10 @@ include '../partials/navbar.php';
     </h1>
     <h2>
       There is no better startline than here.
+      
     </h2>
     
-    <button class="button" style="vertical-align:middle" href="../public/SignUp.php">
-      <span> Get Started </span>
-    </button>
+
 </body>
 
 <?php 

@@ -1,10 +1,11 @@
-
- <?php 
+<?php 
  
-if(isset($_GET['action']) && $_GET['action'] == "signout"){
-  $_SESSION[] = array();
+ //Destroy all session variables and logout
+if(isset($_GET['action']) && $_GET['action'] == "Logout"){
+  session_start();
+  session_unset();
   session_destroy();
-  header('location: /healthcare-php/');
+  header('location: /CryptoExchange/');
 }
 
 ?>
@@ -19,7 +20,7 @@ if(isset($_GET['action']) && $_GET['action'] == "signout"){
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="CryptoPage.php">Market <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="MarketPage.php">Market <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="WalletPage.php">Wallet <span class="sr-only">(current)</span></a>

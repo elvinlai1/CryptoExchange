@@ -22,11 +22,7 @@ include '../app/auth/signIn.php';
                     <input type="password" name="password" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br><br>
                     <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"><input type = reset>
-                  </div>
-                  <div id="register-link" class="text-right"><br>
-                    <a href=sdf >Forget Password?</a>
                   </div>
                 </form>
               </div>

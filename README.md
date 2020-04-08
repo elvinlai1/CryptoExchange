@@ -12,10 +12,19 @@
 
 
 
-## Testing
+## non functional testing
 
 1. Create user
 2. Sign in 
 3. Fund Account with cash
 4. Buy Crypto 
 5. Sell Crypto 
+
+
+## System testing
+
+- Page control access *works*
+- Login/Logout *works*
+- View Market Data *works*
+- View Wallet Data *works*
+- View Homepage Data *works*

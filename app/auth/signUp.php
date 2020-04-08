@@ -34,6 +34,15 @@ if(isset($_POST['submit'])) {
       echo "<script type='text/javascript'>alert('Please fill in all fields');</script>";
     }
 
+    if ($db_found) {
+    }
+    
+    else {
+    
+    $errorMessage = "Error logging on";
+    
+    }
+
     //Check if passwords match
     if($password !== $passwordMatch){
         header('location: ?message=passwordError');

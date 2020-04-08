@@ -1,9 +1,11 @@
 <?php
-
-require "../database/database.php";
+//User Access
+include '../auth/userAccess.php';
+//Interface
 include '../partials/header.php'; 
 include '../partials/navbar.php';
 
+require "../database/database.php";
 $db = new Database();
 
 ?>
@@ -13,7 +15,6 @@ $db = new Database();
 
 <div class="container">
     <table style="width: 100%">
-    <p> Balance does not include crypto values </p>
     <tr>
         <th>Crypto</th>
         <th>Amount</th>
