@@ -11,7 +11,6 @@
 7. `localhost/CryptoExchange/` should direct you to the index. 
 
 
-
 ## non functional testing
 
 1. Create user
