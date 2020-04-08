@@ -1,7 +1,10 @@
 <?php 
 
+include "../src/Crypto.php";
+include "../src/User.php";
+include "../src/Wallet.php";
+
 require "../database/database.php";
-$db = new Database();
 
 class Transaction {
 

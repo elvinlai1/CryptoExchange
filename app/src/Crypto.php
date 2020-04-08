@@ -13,10 +13,17 @@ class Crypto {
 
     
 
-    protected function getCryptoInfo(){
+    function __construct ($CryptoID){
 
         
-
+        $Crypto = $db->run("SELECT * FROM Cryptos WHERE CryptoID=?", [$CryptoID])->fetch();
+    
+        $this->CryptoID = $Crypto['CryptoID'];
+        $this->Name     = $Crypto['Name'];
+        $this->Price    = $Crypto['Price'];
+        $this->Stock    = $Crypto['Stock'];
+        $this->MarketCapital = $Crypto['MarketCapital'];
+    
     }
     
         
@@ -32,6 +39,7 @@ class Crypto {
     }
 
     public function updateCoinAmount(){
+
 
 
     }
