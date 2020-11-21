@@ -12,11 +12,7 @@ We **must** ensure dev is stable before sending it to master branch to prevent c
 
 ## Setting up Github
 
-1. Generate ssh keys `ssh-keygen -t rsa -D 4096 -C "[email account]"`
-2. Add **public** ssh key to Github account
-3. Install Github
-4. Add Github credentials to local machine
-5. Setup github on local machine
+https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
 
 ## Git Hub Commands
 
